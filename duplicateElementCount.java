@@ -14,6 +14,6 @@ class duplicateElementCount {
     }
     
     public static int findDuplicate(ArrayList<Integer> nums, int num) {
-        nums.sort();
+        
     }
 }

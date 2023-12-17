@@ -19,5 +19,10 @@ public class validAnagram {
         str2 = str2.replace(" ", "");
         if (str1.length() != str2.length()) 
             return false;
+
+        char[] ch1 = str1.toCharArray();
+        char[] ch2 = str2.toCharArray();
+
+        return Arrays.equals(ch1, ch2);
     }
 }
