@@ -8,12 +8,12 @@ class duplicateElementCount {
         for (int i = 0; i < num; i++) {
             nums.add(sc.nextInt());
         }
-        int result = findDuplicate(nums, num);
-        System.out.printf("The number of duplicate elements are %d", result);
+        // int result = findDuplicate(nums, num);
+        // System.out.printf("The number of duplicate elements are %d", result);
         sc.close();
     }
     
-    public static int findDuplicate(ArrayList<Integer> nums, int num) {
+    // public static int findDuplicate(ArrayList<Integer> nums, int num) {
         
-    }
+    // }
 }
