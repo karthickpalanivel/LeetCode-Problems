@@ -17,11 +17,15 @@ public class validAnagram {
     public static boolean Anagram(String str1, String str2) {
         str1 = str1.replace(" ", "");
         str2 = str2.replace(" ", "");
+        
         if (str1.length() != str2.length()) 
             return false;
 
         char[] ch1 = str1.toCharArray();
         char[] ch2 = str2.toCharArray();
+        
+        Arrays.sort(ch1);
+        Arrays.sort(ch2);
 
         return Arrays.equals(ch1, ch2);
     }
