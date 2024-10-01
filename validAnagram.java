@@ -2,10 +2,13 @@ import java.util.*;
 public class validAnagram {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        
         System.out.print("Enter the first word: ");
         String str1 = sc.nextLine();
+        
         System.out.print("\nEnter the second word: ");
         String str2 = sc.nextLine();
+        
         if (Anagram(str1, str2)) {
             System.out.println("The two words are anagrams.");
         } else {
