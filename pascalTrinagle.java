@@ -8,7 +8,7 @@ public class pascalTrinagle {
         for (int i = 1; i <= num; i++) {
             for (int j = 1; j <= num; j++) {
                 list.add(i);
-                list(i) = i + (i + 1);        
+                // list(i) = i + (i + 1);        
             }
         }
         sc.close();
