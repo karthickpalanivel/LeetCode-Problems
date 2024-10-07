@@ -1,13 +1,10 @@
 import java.util.*;
-
 public class MaxGoodNumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         int[] arr = {1, 2, 3}; 
-    //arr length is fixed as 3
+        //arr length is fixed as 3
         solution(arr);
- 
         sc.close();
     }
 
