@@ -50,7 +50,6 @@ class AddTwoNumber {
             int newNum = resultNum % 10;
             resultNum /= 10;
             list.add(newNum);
-
         }
        
         System.out.println(list);
