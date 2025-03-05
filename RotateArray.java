@@ -1,28 +1,39 @@
-import java.util.Arrays;
-
+import java.util.*;
+import java.io.*;
 public class RotateArray {
     public static void main(String[] args) {
-        int[] nums = {1,2,3,4,5};
-        int k = 2;
+        int[] nums = {1,2,3,4,5};;
+        int k;
+        int n;
+        k = 2;
+        n = nums.length;
+        if (k > n)
+            k %= n;
+        
+        solution(k, n, nums);
+    }
 
-        int n = nums.length;
-        // Each rotation moves all elements 1 step to the right
-        k = k % n; // Handle cases where k >= n
-        System.out.println(k);
-       
-        int p = 1;
-        for (int i = 0; i < k; i++) {
-            // Store the last element
-            int previous = nums[n - 1];
-            // Shift all elements right
-            for (int j = n - 1; j > 0; j--) {
-                nums[j] = nums[j - 1];
-                System.out.println("rotate no: "+ p +" "+Arrays.toString(nums));
-                p++;
-            }
-            // Place the stored element at the first position
-            nums[0] = previous;
+    private static void solution(int k, int n, int[] nums){
+        reverseArray(0, n - 1, nums);
+        reverseArray(0, k - 1, nums);
+        reverseArray(k, n - 1, nums);
+        PrintWriter pw = new PrintWriter(System.out, true);
+        
+        for(int i : nums){
+            pw.print(i+" ");
         }
-        System.out.println("final rotation: "+Arrays.toString(nums));
+               
+    }
+
+    private static int[] reverseArray(int start, int end, int nums[]){
+        while(start < end){
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start++;
+            end--;
+        }
+
+        return nums;
     }
 }

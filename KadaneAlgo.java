@@ -16,7 +16,7 @@ public class KadaneAlgo {
         int maxValue = Integer.MIN_VALUE;
         int sum = 0;
         int start = 0;
-        int arrStart =0;
+        int arrStart = 0;
         int arrEnd = 0;
         int greatest = 0;
         for(int i = 0; i<nums.length; i++){

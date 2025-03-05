@@ -3,16 +3,16 @@ public class plusOne {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Solution s = new Solution();
-        int n = sc.nextInt();
-        int[] nums = new int[n];
-        int temp = n;
+
+        int[] nums = {4,3,2,1};
+        int temp = nums.length;
         for (int i = 0; i < nums.length; i++) {
             nums[i] = temp % 10;
             temp /= 10;
         }
         
         s.plusOne(nums);
-        for (Integer i : nums) {
+        for (int i : nums) {
             System.out.print(i+"\t");
         }
         sc.close();
