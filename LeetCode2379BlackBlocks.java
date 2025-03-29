@@ -6,12 +6,13 @@ public class LeetCode2379BlackBlocks {
 
     private static int minimumRecolors(String blocks, int k) {
         if(k == 0) return 0;
+        int blackCount = 0;
+        int result = Integer.MAX_VALUE;
 
-        int result = 0;
-        
         for(int i = 0; i < blocks.length(); i++){
-            String sub = blocks.substring(i, i+k);
-            
+            if((i - k >= 0) && (blocks.charAt(i - k) == 'B')) blackCount--;
+            if(blocks.charAt(i)== 'B') blackCount++;
+            result =  Math.min(result, k - blackCount);
         }
         return result;
     }
