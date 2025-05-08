@@ -17,11 +17,6 @@ public class LeetCode2697LexicographicallySmallestPalindrome {
         s = String.copyValueOf(chArr);
         return s;
     } 
-/*
-copyValueOf()
-ValueOf()
-
-*/
     public static void main(String[] args) {
         System.out.println(solution("egcfe"));
         System.out.println(solution("abcd"));
