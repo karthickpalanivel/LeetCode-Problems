@@ -8,5 +8,6 @@ public class AddWithoutOperator {
          performing a + b or b + a without
          using '+' operator. 
          */
+        return 0;
     }
 }
