@@ -11,18 +11,12 @@ public class LeetCode3LongestSubString {
         while(right < n){
             
             if(!set.contains(s.charAt(right))){
-            
                 set.add(s.charAt(right));
                 right++;
                 max = Math.max(max, right - left);
-            
-            } 
-            
-            else {
-            
+            } else {
                 set.remove(s.charAt(left));
                 left++;
-            
             }
         }
         return max;
