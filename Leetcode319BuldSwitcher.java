@@ -1,6 +1,8 @@
 public class Leetcode319BuldSwitcher {
     private static int solution(int n){
-        for(int i = 0; )
+        // for(int i = 0; )
+
+        return 1;
     }
 
     private static boolean isPrime(int num){

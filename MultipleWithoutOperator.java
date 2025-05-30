@@ -9,6 +9,6 @@ public class MultipleWithoutOperator {
          performing a * b or b * a without
         using '*' operator. 
          */
-        
+        return a;
     }
 }
