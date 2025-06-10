@@ -28,7 +28,7 @@ public class LeetCode88MergeSortArr {
 
     public static void main(String args[]){
         int[] arrOne = {1,2,3,0,0,0};
-        int m = 3;
+        int m = arrOne.length;
         int[] arrTwo = {2,5,6};
         int n = arrTwo.length;
         solution(arrOne, arrTwo, m, n);
