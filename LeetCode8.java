@@ -1,44 +1,32 @@
 public class LeetCode8 {
     private static int solution(String s){
-        int result = 0;
-        s = s.trim();
-        String[] nums;
-        String inte = "";
-        String decimal = "";
-        boolean sign = s.charAt(0) == '-' ? false : true;
+        long res = 0;
+        int sign = 1;   
+        int i = 0; // indexing the strings
 
-        if(!sign){
-            s = s.substring(1);
+        if(s.length() == 0) return 0;
+        // ' ' skip the intial spaces
+        while(s.charAt(i) == ' ') i++;
+
+        // check for the sign
+        if(s.charAt(i) == '-'){
+            sign = -1;
+            i++;
+        } else if(s.charAt(i) == '+'){
+            i++;
         }
 
 
-        if(s.indexOf('.') != -1){
-            nums = s.split(".");
-            inte = nums[0];
-            decimal = nums[1];
-        }
-
-        for(int i = 0; i < s.length(); i++){
+        //iterate until we have index as numeric as sum with res variable
+        for( ; i < s.length(); i++){
             char ch = s.charAt(i);
-            int num;
-            if(ch >= '0' && ch <= '9'){
-                num = Character.getNumericValue(ch);
-            } else break;
-            result *= 10;
-            result += num;                        
+            if(ch < '0' || ch > '9') break;
+            res = res * 10 + (ch - '0');
+            if(res * sign > Integer.MAX_VALUE) return Integer.MAX_VALUE;
+            if(res * sign < Integer.MIN_VALUE) return Integer.MIN_VALUE;
         }
 
-        if(!sign) result *= -1;
-
-        // long something = Integer.parseInt(new String(result));
-        // if(!is32BitSignedInteger(something)){
-        //     return sign ? 2147483647 : -2147483648;
-        // }
-        return result;
-    }
-
-    public static boolean is32BitSignedInteger(long num) {
-         return (num <= 2147483647) && (num >= -2147483648);
+        return (int) (sign * res);
     }
 
     public static void main(String[] args) {
@@ -48,3 +36,4 @@ public class LeetCode8 {
         System.out.println(solution("0-1"));
     }
 }
+
