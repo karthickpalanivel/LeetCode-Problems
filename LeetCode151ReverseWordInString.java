@@ -13,7 +13,6 @@ public class LeetCode151ReverseWordInString {
 
     private static String solution(String s){
         String result = "";
-        s = s.trim();
         String[] temp = s.split("\\s+");
         //using \\s+ removes all the whitespace and only add the characters that are separated by whitespaces.
         //using \\s will remove separate non-whitespace characters with one whitespace.
