@@ -7,7 +7,7 @@ public class LeetCode322CoinChange {
         int[] minCoinsDP = new int[amount + 1];
     
 
-        
+
         for(int i = 1; i <= amount; i++){
             minCoinsDP[i] = Integer.MAX_VALUE;
 
@@ -24,7 +24,7 @@ public class LeetCode322CoinChange {
         int[] arrOne = {1,2,5,6,9};
         int[] arrTwo = {5,6,7,8};
         
-        System.out.println(solution(arrOne, 11));
-        System.out.println(solution(arrTwo, 64));
+        System.out.println(solution(arrOne, 11)); // 2
+        System.out.println(solution(arrTwo, 12)); // 8
     }
 }
