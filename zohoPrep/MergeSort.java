@@ -12,7 +12,7 @@ public class MergeSort {
             L[i] = arr[l + i];
         
         for(int i = 0; i < n2; i++){
-            R[i] = arr[m + i + 1]; //
+            R[i] = arr[m + 1 + i]; 
         }
 
         int i = 0, j = 0, k = l;
@@ -53,7 +53,7 @@ public class MergeSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {12,11,13,9,10};
+        int[] arr = {12, 11, 13, 9, 10};
         sort(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));    
     }
